@@ -20,4 +20,5 @@
 ## Dependencies.
 
 - [React navigation](https://reactnavigation.org/)
+- [Styled Components](https://styled-components.com/)
 
