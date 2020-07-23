@@ -6,7 +6,14 @@
 ## Get Project.
 - just type on console `git clone git@github.com:wwwjsw/pokedex.git`.
 
+---
+**NOTE**
+
+Use node LTS! created on v12.18.2.
+---
+
 ## Installation.
+
 ### IOS.
 - run `yarn` to install dependencies.
 - run `npx pod-install ios` to link cocoapods dependencies.
