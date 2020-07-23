@@ -4,7 +4,12 @@ import PokemonPage from '../pages/Pokemon';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-const AppStack = createStackNavigator();
+type RootStackParamList = {
+  Home: undefined;
+  Pokemon: {pokemonId: string};
+};
+
+const AppStack = createStackNavigator<RootStackParamList>();
 
 const AppRoutes: React.FC = () => (
   <AppStack.Navigator>
