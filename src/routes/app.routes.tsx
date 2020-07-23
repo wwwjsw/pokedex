@@ -12,7 +12,10 @@ type RootStackParamList = {
 const AppStack = createStackNavigator<RootStackParamList>();
 
 const AppRoutes: React.FC = () => (
-  <AppStack.Navigator>
+  <AppStack.Navigator
+    screenOptions={{
+      headerShown: false,
+    }}>
     <AppStack.Screen name="Home" component={HomePage} />
     <AppStack.Screen name="Pokemon" component={PokemonPage} />
   </AppStack.Navigator>

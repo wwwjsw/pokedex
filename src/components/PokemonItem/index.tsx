@@ -1,5 +1,5 @@
 import React from 'react';
-import {ViewProps} from 'react-native';
+import {TouchableOpacityProps} from 'react-native';
 import PokemonBadgeIcon from '../PokemonBadgeIcon';
 
 import {
@@ -17,7 +17,7 @@ import {
   PokemonImage,
 } from './styles';
 
-interface Props extends ViewProps {
+interface Props extends TouchableOpacityProps {
   id: number;
   title: string;
   avatar: string;

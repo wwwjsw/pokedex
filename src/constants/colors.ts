@@ -1,8 +1,10 @@
 export const colors = {
   primary: '#3F51B5',
-  accent: '#AF2923',
+  accent: '#62B957',
   containerBg: '#FFF',
   textColor: '#000',
+  textStat: '#17171B',
+  textStatValue: '#747476',
   borderColor: '#ccc',
 };
 

@@ -1,6 +1,8 @@
 # Pokédex.
 - An simple client to [pokeapi.co](https://pokeapi.co/), the propurse is list all pokemons and see details like HP, Attack, Defense, speed and abilities.
 
+<p align="center"><img src="https://i.ibb.co/1LmXSG2/Simulator-Screen-Shot-i-Phone-11-2020-07-23-at-06-15-17.png" width="30%"/> <img src="https://i.ibb.co/XL9jxmk/Simulator-Screen-Shot-i-Phone-11-2020-07-23-at-06-15-23.png" width="30%"/></p>
+
 ## Installation.
 ### IOS.
 - run `yarn` to install dependencies.
@@ -13,7 +15,7 @@
 
 ## Technical requirements.
 
-- React (Hooks and Context API). 
+- React (Hooks). 
 - React-native.
 - Typescript.
 
@@ -24,4 +26,3 @@
 - [React Redux](https://github.com/reduxjs/react-redux)
 - [Reactotron](https://redux-toolkit.js.org/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
-

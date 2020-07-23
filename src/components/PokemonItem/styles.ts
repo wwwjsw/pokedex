@@ -9,7 +9,7 @@ interface BadgePropsBadge {
   typeName: keyof typeof colorsBadge;
 }
 
-export const PokemonCard = styled.View`
+export const PokemonCard = styled.TouchableOpacity`
   min-width: 300px;
   height: 115px;
   width: 90%;
@@ -29,6 +29,7 @@ export const PokemonInfo = styled.View`
 `;
 
 export const PokemonInfoNameSection = styled.View``;
+
 export const PokemonInfoID = styled.Text`
   font-family: 'SFProDisplay-Regular';
   color: rgba(23, 23, 27, 0.6);
@@ -46,6 +47,7 @@ export const PokemonInfoNameTitle = styled.Text`
   text-transform: capitalize;
   margin-bottom: 5px;
 `;
+
 export const PokemonBadges = styled.View`
   flex-direction: row;
 `;
