@@ -13,7 +13,7 @@
 
 ## Technical requirements.
 
-- React (Hooks and Context API). 
+- React (Hooks). 
 - React-native.
 - Typescript.
 
