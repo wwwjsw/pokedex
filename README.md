@@ -3,6 +3,9 @@
 
 <p align="center"><img src="https://i.ibb.co/1LmXSG2/Simulator-Screen-Shot-i-Phone-11-2020-07-23-at-06-15-17.png" width="30%"/> <img src="https://i.ibb.co/XL9jxmk/Simulator-Screen-Shot-i-Phone-11-2020-07-23-at-06-15-23.png" width="30%"/></p>
 
+## Get Project.
+- just type on console `git clone git@github.com:wwwjsw/pokedex.git`.
+
 ## Installation.
 ### IOS.
 - run `yarn` to install dependencies.
