@@ -1,5 +1,5 @@
 import React, {useEffect, useState, ReactNode} from 'react';
-import {FlatList} from 'react-native';
+import {FlatList, SafeAreaView} from 'react-native';
 
 import {connect, useSelector} from 'react-redux';
 import {ActivityIndicatorContainer, Loading} from './styles';
@@ -18,6 +18,7 @@ interface State {
   data: any[];
   loading: boolean;
 }
+
 interface itemProp {
   item: any;
 }
@@ -28,38 +29,41 @@ const Home = (props: Props) => {
 
   const {data, loading} = useSelector((state: State) => state);
 
-  const {fetchPokemonsList, fetchMorePokemonsList} = props;
+  const {fetchPokemonsList, fetchMorePokemonsList, navigation} = props;
 
   useEffect(() => {
     fetchPokemonsList(page, limit);
   }, []);
 
   return (
-    <FlatList
-      data={data}
-      keyExtractor={(item) => item.name}
-      renderItem={({item}: itemProp) => {
-        return (
-          <PokemonItem
-            id={item.id}
-            avatar={item.sprites.front_default}
-            title={item.name}
-            types={item.types}
-          />
-        );
-      }}
-      onEndReached={() => {
-        setPage(page + limit);
-        fetchMorePokemonsList(page + limit, limit);
-      }}
-      ListFooterComponent={
-        loading ? (
-          <ActivityIndicatorContainer>
-            <Loading color={colors.textColor} />
-          </ActivityIndicatorContainer>
-        ) : null
-      }
-    />
+    <SafeAreaView>
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.name}
+        renderItem={({item}: itemProp) => {
+          return (
+            <PokemonItem
+              id={item.id}
+              avatar={item.sprites.front_default}
+              title={item.name}
+              types={item.types}
+              onPress={() => navigation.navigate('Pokemon', item)}
+            />
+          );
+        }}
+        onEndReached={() => {
+          setPage(page + limit);
+          fetchMorePokemonsList(page + limit, limit);
+        }}
+        ListFooterComponent={
+          loading ? (
+            <ActivityIndicatorContainer>
+              <Loading color={colors.textColor} />
+            </ActivityIndicatorContainer>
+          ) : null
+        }
+      />
+    </SafeAreaView>
   );
 };
 
