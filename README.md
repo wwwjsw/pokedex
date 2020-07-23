@@ -25,7 +25,7 @@ Use node LTS! created on v12.18.2.
 
 ## Technical requirements.
 
-- React (Hooks). 
+- React (Hooks, memo). 
 - React-native.
 - Typescript.
 
