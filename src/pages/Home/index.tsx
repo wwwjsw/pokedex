@@ -38,6 +38,7 @@ const Home = (props: Props) => {
   return (
     <SafeAreaView>
       <FlatList
+        initialNumToRender={6}
         data={data}
         keyExtractor={(item) => item.name}
         renderItem={({item}: itemProp) => {
@@ -47,7 +48,7 @@ const Home = (props: Props) => {
               avatar={item.sprites.front_default}
               title={item.name}
               types={item.types}
-              onPress={() => navigation.navigate('Pokemon', item)}
+              navTo={() => navigation.navigate('Pokemon', item)}
             />
           );
         }}
